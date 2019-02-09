@@ -24,16 +24,12 @@ def won?(board)
     position_1 = board[win_index_1] # load the value of the board at win_index_1
     position_2 = board[win_index_2] # load the value of the board at win_index_2
     position_3 = board[win_index_3] # load the value of the board at win_index_3
-
-    if position_1 == "X" && position_2 == "X" && position_3 == "X"
-      return win_combination
-    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-      return win_combination # return the win_combination indexes that won.
-    else
-      return false
-    end
-  end
+    position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+ end
 end
+
+#position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
+The above code means to return first element (position_1) & make sure the position is taken by X or O
 
 def full?(board)
   board.all? {|index| index == "X" || index == "O"}
