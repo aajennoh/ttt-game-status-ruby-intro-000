@@ -29,7 +29,7 @@ def won?(board)
 end
 
 #position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
-The above code means to return first element (position_1) & make sure the position is taken by X or O
+#The above code means to return first element (position_1) & make sure the position is taken by X or O
 
 def full?(board)
   board.all? {|index| index == "X" || index == "O"}
